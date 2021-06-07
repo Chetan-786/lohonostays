@@ -1,38 +1,82 @@
 .App {
-  text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.newsArticles {
+  border: 1px solid #000000;
+  height: 100px;
+  padding: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.newsArticles .rightBtns{
+  float: right;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.newsArticles h3 {
+  margin: 0;
+}
+.pd10{
+  padding: 10px;
+}
+.newsBody{
+  border: 1px solid #000000;
+  min-height: 300px;
+  margin-top: 20px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+}
+.boxData {
+  width: 30%;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+.thumbnailImg img{
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-container {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  right: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px 3px #2f2f31;
+  outline: none;
+  opacity: 0;
+  z-index: -1;
+  max-height: 0;
+}
+.dropdown div:not(:last-child) {
+  border-bottom: 1px solid #000000;
+}
+.dropdown div {
+  padding: 2px 10px 2px;
+}
+.dropdown div:hover {
+  cursor: pointer;
+  background: #f9f8f8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-container:focus {
+  outline: none;
+}
+
+.dropdown-container:focus .dropdown {
+  opacity: 1;
+  z-index: 100;
+  max-height: 100vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.three-dots {
+  float: right;
+}
+.three-dots:after {
+  cursor: pointer;
+  color: #212020;
+  content: '\2807';
+  font-size: 20px;
+  padding: 0 5px;
 }
